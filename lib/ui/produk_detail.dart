@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:pert4_crud/bloc/produk_bloc.dart';
 import 'package:pert4_crud/model/produk.dart';
 import 'package:pert4_crud/ui/produk_form.dart';
+import 'package:pert4_crud/ui/produk_page.dart';
 
 class ProdukDetail extends StatefulWidget {
   Produk? produk;
@@ -15,7 +17,7 @@ class _ProdukDetailState extends State<ProdukDetail> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Detail Produk Tiannn'),
+        title: const Text('Detail Produk Aufa'),
       ),
       body: Center(
         child: Column(
@@ -68,7 +70,11 @@ class _ProdukDetailState extends State<ProdukDetail> {
 //tombol hapus
         OutlinedButton(
           child: const Text("Ya"),
-          onPressed: () {},
+          onPressed: () {
+            ProdukBloc.deleteProduk(id: widget.produk!.id);
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const ProdukPage()));
+          },
         ),
 //tombol batal
         OutlinedButton(
@@ -77,7 +83,6 @@ class _ProdukDetailState extends State<ProdukDetail> {
         )
       ],
     );
-
     showDialog(builder: (context) => alertDialog, context: context);
   }
 }
