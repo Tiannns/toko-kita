@@ -29,7 +29,7 @@ class _ProdukFormState extends State<ProdukForm> {
   isUpdate() {
     if (widget.produk != null) {
       setState(() {
-        judul = "UBAH PRODUK Aufa";
+        judul = "UBAH PRODUK Tiannn";
         tombolSubmit = "UBAH";
         _kodeProdukTextboxController.text = widget.produk!.kodeProduk!;
         _namaProdukTextboxController.text = widget.produk!.namaProduk!;
@@ -37,7 +37,7 @@ class _ProdukFormState extends State<ProdukForm> {
             widget.produk!.hargaProduk.toString();
       });
     } else {
-      judul = "TAMBAH PRODUK Aufa";
+      judul = "TAMBAH PRODUK Tiannn";
       tombolSubmit = "SIMPAN";
     }
   }

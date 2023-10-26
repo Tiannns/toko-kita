@@ -20,7 +20,7 @@ class _RegistrasiPageState extends State<RegistrasiPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Registrasi Aufa"),
+        title: const Text("Registrasi Tiannn"),
       ),
       body: SingleChildScrollView(
         child: Padding(
